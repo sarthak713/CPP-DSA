@@ -3,6 +3,7 @@
         "*.ejs": "html",
         "vector": "cpp",
         "unordered_set": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "ostream": "cpp"
     }
 }

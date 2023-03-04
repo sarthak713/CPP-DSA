@@ -12,50 +12,40 @@ Input: {5,4,3,2,1}
 Output: 2
 
 Approach:
-    - know correct position of each element in arr
-        - use sort function, O(nlog n)
-    - For a cycle containing N to be swapped, we need (N-1) swaps
+    - make vector of pairs <arr[i],i>
+    - sort this new vector
+    - iterate new vector
+    - check if i==v[i].second
+        - if correct continue
+        - else, swap v[i] & v[v[i].second], i-- to check again & ans++
+    T.C. = O(nlog n), S.C. = O(n)
 */
 
 int minSwaps(vector<int>arr){
-
+    int n = arr.size();
     int ans=0;
-    int n=arr.size();
-
-    vector<pair<int,int> >v(n);
+    vector<pair<int,int> > v(n);
     for(int i=0;i<n;i++){
-        v[i].first=arr[i];
-        v[i].second=i;
+        v[i]={arr[i],i};
     }
-
-    sort(v.begin(),v.end());            // sort
-
-    vector<bool>vis(n,false);           // Main Logic
-
+    sort(v.begin(),v.end());
     for(int i=0;i<n;i++){
-
-        if(vis[i] || v[i].second==i){   // if element is visited OR element is in right prosition
+        int element=v[i].second;
+        if(i!=element){
+            swap(v[i],v[element]);
+            i--;
+            ans++;
+        }
+        else{
             continue;
         }
-
-        int cycle=0;                    // if visiting element for first time
-        while(!vis[i]){                 // looking at old & new postions & completing cycle
-            vis[i]=true;
-            int next=v[i].second;
-            i=next;
-            cycle+=1;
-        }
-        ans+=(cycle-1);                 // for n elements, n-1 swaps required
-
     }
-
     return ans;
-
 }
 
 int main(){
     
-    vector<int>arr={5,4,3,2,1};
+    vector<int>arr={1,4,3,2,5};
     cout<<minSwaps(arr)<<endl;
     
     return 0;

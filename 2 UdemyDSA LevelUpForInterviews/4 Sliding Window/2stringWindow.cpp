@@ -88,7 +88,7 @@ int main(){
     string s3="fizzbuzz";
     string s4="fuzz";           // fizzbu
 
-    string s5="hello";
+    string s5="helloe";
     string s6="eol";            // loe
 
     cout<<stringWindow(s1,s2)<<endl;

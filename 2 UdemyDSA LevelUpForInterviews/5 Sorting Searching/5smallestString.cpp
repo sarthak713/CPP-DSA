@@ -9,8 +9,9 @@ bool compare(string x,string y){
 int main(){
     
     string arr[]={"c","cb","cba"};
-    sort(arr,arr+3,compare);
-    for(auto i:arr){
+    string arr1[]={"a","ab","aba"};
+    sort(arr1,arr1+3,compare);
+    for(auto i:arr1){
         cout<<i<<endl;
     }
     

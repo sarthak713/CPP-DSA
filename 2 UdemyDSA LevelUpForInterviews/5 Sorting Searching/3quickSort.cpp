@@ -38,7 +38,7 @@ int partition(vector<int>&arr,int s,int e){
             j--;
         }
         if(i<pivotIndex && j>pivotIndex){
-            swap(arr[i++],arr[j++]);
+            swap(arr[i++],arr[j--]);
         }
     }
     return pivotIndex;

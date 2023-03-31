@@ -36,7 +36,7 @@ vector<string> letterCombinations(string digits){
 
 int main(){
     
-    string digits="23";
+    string digits="3";
     string output="";
     vector<string>ans=letterCombinations(digits);
     for(auto i:ans)

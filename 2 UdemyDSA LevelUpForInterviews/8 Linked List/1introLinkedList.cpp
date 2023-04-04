@@ -62,6 +62,23 @@ void deleteAtPosition(Node*&head,int position){
     delete toDel;
 }
 
+void insertInMiddle(Node*&head,int position,int data){
+    if(head==NULL || position==1){
+        insertAtHead(head,data);
+        return;
+    }
+    Node*temp=head;
+    int count=1;
+    while(count<position-1 && temp->next!=NULL){
+        count++;
+        temp=temp->next;
+    }
+    Node*n=new Node(data);
+    Node*nextNode=temp->next;
+    temp->next=n;
+    n->next=nextNode;
+}
+
 void print(Node*head){
     if(head==NULL){
         cout<<"No Element in List: NULL"<<endl;
@@ -81,13 +98,11 @@ int main(){
     insertAtHead(head,1);
     insertAtTail(head,4);
     insertAtTail(head,5);
-    print(head);
-
-    deleteAtPosition(head,3);
-    deleteAtPosition(head,3);
-    deleteAtPosition(head,2);
-    deleteAtPosition(head,2);
-    deleteAtPosition(head,1);
+    insertInMiddle(head,3,7);
+    insertInMiddle(head,1,10);
+    insertInMiddle(head,2,11);
+    insertInMiddle(head,9,20);
+    insertInMiddle(head,8,19);
     print(head);
     
     return 0;

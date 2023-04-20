@@ -35,7 +35,6 @@ int main(){
     
     vector<int>arr={2,3,5};
     int target=8;
-    // ans = {2,2,3} {7}
     vector<vector<int>>ans=combinationSum(arr,target);
     for(auto i:ans){
         for(auto j:i){

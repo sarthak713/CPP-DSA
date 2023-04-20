@@ -5,6 +5,7 @@
         "unordered_set": "cpp",
         "xhash": "cpp",
         "ostream": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "algorithm": "cpp"
     }
 }

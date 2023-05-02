@@ -5,7 +5,7 @@ using namespace std;
 /*
 Quick Sort
 - pick element & put it in right place
-    - such than elements to its left are Small
+    - such that elements to its left are Small
     - elements to its right are Greater
 - This is partitioning
 - Use recursion to sort

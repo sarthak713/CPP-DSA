@@ -6,6 +6,7 @@
         "xhash": "cpp",
         "ostream": "cpp",
         "xstring": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iostream": "cpp"
     }
 }

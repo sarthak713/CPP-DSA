@@ -9,6 +9,7 @@
         "algorithm": "cpp",
         "iostream": "cpp",
         "stack": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "queue": "cpp"
     }
 }

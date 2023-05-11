@@ -8,6 +8,7 @@
         "xstring": "cpp",
         "algorithm": "cpp",
         "iostream": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "utility": "cpp"
     }
 }

@@ -4,7 +4,8 @@ using namespace std;
 /*
 Insertion Deletion Searching in TRIE 
 
-Time Complexities of all Operations: O(length of word)
+Time Complexities of all Operations: 
+    O(length of word)
 */
 
 class Trie {
